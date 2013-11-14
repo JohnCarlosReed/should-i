@@ -3,21 +3,15 @@
  
 int main()
 {
-    /* Save this for later 
-    time_t current_time = time(NULL);
-    char* c_time_string = ctime(&current_time);
-    printf( "current time is %s", c_time_string );
-    */
-
+    /* seed rand */
     srand( time(NULL) );
-    int i, x;
 
-    for( x = 1; x <= 8; x++){
-        i = rand() % 2;
-        printf("%d", i);
-        if( x % 8 == 0 )
-            printf("\n"); 
+    int i = rand() % 2;
+
+    if( i == 1 ) {
+        printf("Why, yes you should.");
+    } else {
+        printf("No, I would certainly not do that.");
     }
-
     return 0;
 }
