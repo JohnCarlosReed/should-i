@@ -3,15 +3,20 @@
  
 int main()
 {
+
+    /* put these in another file? */
+    const char* yes[] = { "Yes.", "Oh yea." };
+    const char* no[] = { "No.", "No way." };
+
     /* seed rand */
     srand( time(NULL) );
 
     int i = rand() % 2;
 
     if( i == 1 ) {
-        printf("Why, yes you should.");
+        puts( yes[0] );
     } else {
-        printf("No, I would certainly not do that.");
+        puts( no[0] );
     }
     return 0;
 }
