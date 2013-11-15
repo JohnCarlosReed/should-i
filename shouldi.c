@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <time.h>
- 
+#include "answers.h"
+
 int main()
 {
-    /* put these in another file? */
-    const char* yes[] = { "Yes.", "Oh yea." };
-    const char* no[] = { "No.", "No way." };
 
     /* seed rand */
     srand( time(NULL) );
