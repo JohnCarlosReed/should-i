@@ -2,6 +2,12 @@
 #include <time.h>
 #include "answers.h"
 
+/* TODO 
+     - calculate the current length of answer arrays
+     - two more rand variables to use for picking random answers
+     - add more answsers
+*/
+
 int main()
 {
 
