@@ -2,39 +2,32 @@
 #include <time.h>
 #include "answers.h"
 
-int array_length(char **);
+int array_length( char ** );
 
-/* TODO 
-     - two more rand variables to use for picking random answers
-     - add more answsers
-*/
+#define YES 1
+#define NO 0
 
 int main()
 {
 
-    int yes_length = array_length( yes );
-    printf("length of yes: %d \n", yes_length);
+    int yes_count = array_length( yes );
+    int no_count = array_length( no );
 
-    int no_length = array_length( no );
-    printf("length of no: %d \n", no_length);
-
-
-
-/*
-    int no_length = array_length( no );
-    printf("length of no: %d \n", no_length);
-*/
     /* seed rand */
-    srand( time(NULL) );
+    srand( time( NULL ) );
     
-    /* random 0 or 1 */
-    int i = rand() % 2;
+    /* random YES or NO */
+    int yes_or_no = rand() % 2;
 
-    if( i == 1 ) {
-       // puts( yes[0] );
+    /* array index to access for yes and no arrays */
+    int yes_idx = rand() % yes_count;
+    int no_idx  = rand() % no_count;
+
+    if( yes_or_no == 1 ) {
+        puts( yes[ yes_idx ] );
     }
     else {
-      //  puts( no[0] );
+        puts( no[ no_idx ] );
     }
 
     return 0;
@@ -42,11 +35,9 @@ int main()
 
 /* This function counts the number of elements in a char *[],
    until I learn a better way */
-int array_length(char **answer){
-    /* puts( answer[1] ); */
+int array_length( char **answer ){
     int count = 0;
     while( *answer != '\0' ){
-        /* puts( *answer ); */
         answer++;
         count++;
     } 
