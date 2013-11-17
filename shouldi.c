@@ -18,6 +18,12 @@ int main()
     int no_length = array_length( no );
     printf("length of no: %d \n", no_length);
 
+
+
+/*
+    int no_length = array_length( no );
+    printf("length of no: %d \n", no_length);
+*/
     /* seed rand */
     srand( time(NULL) );
     
