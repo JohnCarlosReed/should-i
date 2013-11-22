@@ -11,7 +11,7 @@ int main()
 {
 
     int yes_count = array_length( yes );
-    int no_count = array_length( no );
+    int no_count  = array_length( no );
 
     /* seed rand */
     srand( time( NULL ) );
@@ -23,12 +23,7 @@ int main()
     int yes_idx = rand() % yes_count;
     int no_idx  = rand() % no_count;
 
-    if( yes_or_no == 1 ) {
-        puts( yes[ yes_idx ] );
-    }
-    else {
-        puts( no[ no_idx ] );
-    }
+    yes_or_no == YES ? puts( yes[ yes_idx ] ) : puts( no[ no_idx ] );
 
     return 0;
 }
